@@ -1,184 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#07111f" />
-  <meta name="description" content="Ronak Makwana — Electrical Engineering, Industrial Automation, PLC, HMI, SCADA and IIoT portfolio." />
-  <title>Ronak Makwana | Industrial Automation & Technology</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#07111f;--panel:#0d1b2b;--panel2:#102237;--line:rgba(164,190,215,.15);--text:#edf5fc;--muted:#9db0c4;--green:#a3f36b;--cyan:#65d9e8;--max:1160px;--shadow:0 24px 80px rgba(0,0,0,.28)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.mono{font-family:"DM Mono",monospace}.eyebrow{color:var(--green);font:500 11px "DM Mono",monospace;letter-spacing:.17em;text-transform:uppercase}.section{padding:112px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.section-head h2{font-size:clamp(32px,4vw,48px);letter-spacing:-.055em;line-height:1.08;margin:12px 0 0}.section-head p{max-width:420px;color:var(--muted);margin:0;font-size:14px}
-    .topline{height:3px;background:linear-gradient(90deg,var(--green),var(--cyan),transparent);position:fixed;top:0;left:0;width:0;z-index:1000}
-    header{position:fixed;top:3px;left:0;right:0;z-index:99;background:rgba(7,17,31,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.04em}.brand-mark{width:38px;height:38px;border:1px solid rgba(163,243,107,.55);border-radius:12px;display:grid;place-items:center;color:var(--green);font:500 14px "DM Mono",monospace;background:linear-gradient(145deg,rgba(163,243,107,.12),rgba(101,217,232,.04));box-shadow:0 0 30px rgba(163,243,107,.08)}.brand small{display:block;font:10px "DM Mono",monospace;color:var(--muted);letter-spacing:.12em;margin-top:-3px}.navlinks{display:flex;align-items:center;gap:28px;color:#c0cede;font-size:12px;font-weight:700}.navlinks a{transition:.2s}.navlinks a:hover{color:var(--green)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(163,243,107,.5);background:var(--green);color:#09131d;padding:12px 18px;border-radius:7px;font-weight:800;font-size:12px;transition:.25s;cursor:pointer}.nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(163,243,107,.18)}.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 10px}
-    .hero{min-height:790px;padding:165px 0 90px;position:relative;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 78% 35%,rgba(38,108,126,.18),transparent 38%),radial-gradient(ellipse at 15% 80%,rgba(111,162,65,.10),transparent 35%)}.grid-bg{position:absolute;inset:0;opacity:.23;background-image:linear-gradient(rgba(141,177,201,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(141,177,201,.12) 1px,transparent 1px);background-size:62px 62px;mask-image:linear-gradient(to bottom,black,transparent 92%);pointer-events:none}.hero-inner{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:55px;align-items:center}.availability{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid var(--line);border-radius:30px;background:rgba(13,27,43,.72);font:10px "DM Mono",monospace;color:#c5d4e2;letter-spacing:.04em}.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green);animation:pulse 2s infinite}@keyframes pulse{50%{opacity:.35;box-shadow:0 0 2px var(--green)}}.hero h1{font-size:clamp(48px,7vw,82px);line-height:.99;letter-spacing:-.075em;margin:27px 0 22px;font-weight:800}.hero h1 span{color:var(--green)}.hero-copy{color:#aebfd0;max-width:590px;font-size:16px;line-height:1.85}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn-outline{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid var(--line);border-radius:7px;color:#dce7f1;font-size:12px;font-weight:800;transition:.25s}.btn-outline:hover{border-color:var(--cyan);transform:translateY(-3px)}.hero-meta{display:flex;gap:26px;margin-top:52px;padding-top:23px;border-top:1px solid var(--line);color:var(--muted);font:10px "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase}.hero-meta strong{display:block;color:var(--text);font:700 18px Manrope,sans-serif;letter-spacing:-.04em;margin-bottom:3px}
-    .visual{position:relative;min-height:440px;display:grid;place-items:center}.orbit{position:absolute;width:390px;height:390px;border:1px solid rgba(101,217,232,.22);border-radius:50%;animation:rotate 28s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(163,243,107,.16);border-radius:50%;inset:35px}.orbit:after{inset:78px;border-style:dashed}@keyframes rotate{to{transform:rotate(360deg)}}.core-card{position:relative;width:min(100%,360px);padding:25px;border:1px solid rgba(150,190,210,.24);border-radius:16px;background:linear-gradient(145deg,rgba(17,40,59,.96),rgba(8,20,34,.96));box-shadow:var(--shadow);transform:perspective(900px) rotateY(-8deg) rotateX(3deg);animation:float 6s ease-in-out infinite}.core-card:before{content:"";position:absolute;inset:-1px;border-radius:16px;padding:1px;background:linear-gradient(140deg,rgba(163,243,107,.6),transparent 35%,rgba(101,217,232,.5));mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;pointer-events:none}@keyframes float{50%{transform:perspective(900px) rotateY(-4deg) rotateX(1deg) translateY(-12px)}}.card-top{display:flex;justify-content:space-between;color:var(--muted);font:10px "DM Mono",monospace;letter-spacing:.1em}.signal{color:var(--green)}.chip{margin:32px auto 26px;width:112px;height:112px;border:1px solid rgba(163,243,107,.45);border-radius:26px;display:grid;place-items:center;font:500 31px "DM Mono",monospace;color:var(--green);background:radial-gradient(circle,rgba(163,243,107,.13),rgba(163,243,107,.02));box-shadow:0 0 55px rgba(163,243,107,.1)}.core-card h3{text-align:center;margin:0;font-size:21px;letter-spacing:-.04em}.core-card>p{text-align:center;color:var(--muted);font:10px "DM Mono",monospace;letter-spacing:.12em;margin:7px 0 25px}.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.metric{padding:11px 7px;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:8px;text-align:center}.metric b{display:block;color:var(--cyan);font-size:14px}.metric span{font:9px "DM Mono",monospace;color:var(--muted)}.float-tag{position:absolute;padding:10px 13px;border:1px solid var(--line);background:#0d1b2b;border-radius:8px;color:#dce8f3;font:10px "DM Mono",monospace;box-shadow:var(--shadow)}.tag-a{top:55px;right:0}.tag-b{bottom:50px;left:-10px}.tag-c{bottom:5px;right:18px}
-    .trustbar{border-block:1px solid var(--line);background:rgba(13,27,43,.55)}.trust-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0;flex-wrap:wrap}.trust-label{color:var(--muted);font:10px "DM Mono",monospace;letter-spacing:.12em}.trust-item{font-size:12px;font-weight:800;color:#c3d1de;letter-spacing:.02em}
-    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.about-panel{padding:30px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,var(--panel),rgba(13,27,43,.45));position:relative;overflow:hidden}.about-panel:after{content:"RM";position:absolute;right:-7px;bottom:-50px;font:800 190px Manrope;color:rgba(163,243,107,.035);letter-spacing:-.12em}.about-panel h3{font-size:25px;letter-spacing:-.05em;margin:20px 0 10px}.about-panel p,.about-text p{color:var(--muted);font-size:14px;line-height:1.9}.about-text p:first-child{margin-top:0}.about-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}.point{display:flex;gap:10px;align-items:center;color:#d8e4ee;font-size:12px}.check{width:22px;height:22px;display:grid;place-items:center;border-radius:6px;background:rgba(163,243,107,.1);color:var(--green);font-size:12px}
-    .services{background:#091625;border-block:1px solid var(--line)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{padding:26px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,rgba(16,34,55,.9),rgba(10,24,39,.7));transition:.3s;min-height:220px}.service:hover,.project:hover{transform:translateY(-7px);border-color:rgba(163,243,107,.4);box-shadow:0 18px 45px rgba(0,0,0,.18)}.service-icon{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;background:rgba(101,217,232,.09);color:var(--cyan);font-size:19px}.service h3{font-size:17px;margin:21px 0 8px;letter-spacing:-.03em}.service p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}
-    .project-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.filter{border:1px solid var(--line);background:transparent;color:var(--muted);padding:8px 13px;border-radius:30px;font:10px "DM Mono",monospace;cursor:pointer;transition:.2s}.filter.active,.filter:hover{background:var(--green);border-color:var(--green);color:#07111f}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:var(--panel);transition:.3s}.project[hidden]{display:none}.project-art{height:175px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(101,217,232,.17),transparent 40%),linear-gradient(135deg,#10283b,#0a1727);display:grid;place-items:center}.project-art:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(163,243,107,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(163,243,107,.08) 1px,transparent 1px);background-size:22px 22px;transform:perspective(250px) rotateX(22deg) scale(1.4);transform-origin:bottom}.art-symbol{position:relative;width:76px;height:76px;border:1px solid rgba(163,243,107,.6);border-radius:18px;display:grid;place-items:center;color:var(--green);font:500 20px "DM Mono",monospace;background:rgba(7,17,31,.82);box-shadow:0 0 45px rgba(163,243,107,.12)}.project-body{padding:22px}.project-type{font:10px "DM Mono",monospace;color:var(--green);letter-spacing:.12em;text-transform:uppercase}.project h3{font-size:18px;letter-spacing:-.04em;margin:10px 0}.project p{font-size:12px;color:var(--muted);line-height:1.8;min-height:66px}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:17px}.tags span{padding:5px 8px;border-radius:4px;background:rgba(255,255,255,.05);color:#b7c7d6;font:9px "DM Mono",monospace}
-    .process{background:linear-gradient(180deg,#091625,#07111f)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{padding:22px;border-top:1px solid rgba(163,243,107,.45);background:rgba(13,27,43,.6)}.step-no{font:11px "DM Mono",monospace;color:var(--green)}.step h3{font-size:15px;margin:17px 0 8px}.step p{color:var(--muted);font-size:11px;line-height:1.8;margin:0}
-    .contact-box{display:grid;grid-template-columns:1fr .8fr;gap:50px;padding:48px;border:1px solid rgba(163,243,107,.24);border-radius:16px;background:radial-gradient(ellipse at 90% 10%,rgba(101,217,232,.1),transparent 40%),linear-gradient(135deg,#102337,#0a1828);box-shadow:var(--shadow)}.contact-box h2{font-size:clamp(34px,4vw,52px);line-height:1.05;letter-spacing:-.06em;margin:14px 0}.contact-box p{color:var(--muted);font-size:13px;max-width:500px}.contact-details{display:flex;flex-direction:column;justify-content:center;gap:14px}.contact-line{display:flex;align-items:center;gap:12px;padding:14px;border:1px solid var(--line);border-radius:8px;color:#dce7f1;font-size:12px}.contact-line span:first-child{color:var(--green);font-size:17px}
-    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font:10px "DM Mono",monospace}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:18px}.footer-links a:hover{color:var(--green)}
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}
-    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:20px}.hero{min-height:auto}.visual{min-height:420px}.about-grid{grid-template-columns:1fr;gap:25px}.project-grid{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}.contact-box{grid-template-columns:1fr}.navlinks{gap:15px}}
-    @media(max-width:650px){.wrap{width:min(var(--max),calc(100% - 32px))}.section{padding:78px 0}.nav{height:66px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;padding:20px 22px 24px;background:#0a1929;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:18px}.navlinks.open{display:flex}.navlinks .nav-cta{text-align:center}.hero{padding:132px 0 65px}.hero h1{font-size:clamp(46px,13vw,66px)}.hero-copy{font-size:14px}.hero-meta{gap:15px;flex-wrap:wrap}.hero-meta strong{font-size:16px}.visual{min-height:360px}.orbit{width:300px;height:300px}.core-card{width:min(100%,320px);padding:20px}.tag-a{right:-2px;top:24px}.tag-b{left:-2px;bottom:25px}.tag-c{right:0;bottom:-3px}.section-head{display:block}.section-head p{margin-top:18px}.service-grid,.project-grid,.steps{grid-template-columns:1fr}.service{min-height:0}.project-art{height:155px}.project p{min-height:0}.contact-box{padding:27px 22px}.about-points{grid-template-columns:1fr}.trust-inner{justify-content:flex-start}.trust-item{width:calc(50% - 12px)}.footer-inner{display:block}.footer-links{margin-top:15px}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RMTECH | Industrial Automation &amp; Engineering Technology</title>
+<meta name="description" content="RMTECH by Ronak Makwana — Industrial Automation, Electrical Engineering, PLC, SCADA, Industrial IoT, Machine Automation and Smart Manufacturing.">
+<meta name="theme-color" content="#07111F">
+<link rel="canonical" href="https://rmtech.in">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RMTECH">
+<meta property="og:title" content="RMTECH | Industrial Automation &amp; Engineering Technology">
+<meta property="og:description" content="Engineering Innovation. Digital Transformation. Industrial Automation, Electrical Engineering, SCADA, IoT and Smart Manufacturing.">
+<meta property="og:url" content="https://rmtech.in">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307111F'/%3E%3Crect x='3' y='3' width='58' height='58' rx='12' fill='none' stroke='%23D8B878' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' font-weight='700' text-anchor='middle' fill='%2351D7E8'%3ERM%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#07111F;--bg2:#0B1727;--card:#101F32;--cyan:#51D7E8;--em:#58D6A2;--gold:#D8B878;--tx:#EDF4FB;--mu:#A6B6C8;--ln:rgba(166,182,200,.16);--max:1160px;--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--sans);line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}ul{list-style:none;margin:0;padding:0}h1,h2,h3,p{margin:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.sec{padding:104px 0}.alt{background:var(--bg2);border-block:1px solid var(--ln)}
+.kicker{color:var(--gold);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,46px);line-height:1.15;margin:12px 0 14px;letter-spacing:-.01em}
+.lead{color:var(--mu);max-width:640px}.head{margin-bottom:46px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:4px;font-weight:600;font-size:14px;border:1px solid var(--gold);background:var(--gold);color:#07111F;transition:.25s;cursor:pointer}
+.btn:hover{background:transparent;color:var(--gold)}
+.btn.ghost{background:transparent;color:var(--tx);border-color:var(--ln)}.btn.ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(7,17,31,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--ln)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:38px;height:38px;border:1px solid var(--gold);border-radius:9px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:var(--cyan);font-size:15px}
+.brand b{font-family:var(--serif);letter-spacing:.14em;font-size:18px}
+.links{display:flex;align-items:center;gap:26px;font-size:13px;color:var(--mu)}
+.links a:hover{color:var(--gold)}.links .cta{color:var(--gold);border:1px solid var(--gold);padding:8px 16px;border-radius:4px}.links .cta:hover{background:var(--gold);color:#07111F}
+.burger{display:none;background:none;border:1px solid var(--ln);color:var(--tx);border-radius:6px;padding:7px 11px;font-size:18px;cursor:pointer}
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;overflow:hidden;background:radial-gradient(ellipse at 80% 30%,rgba(81,215,232,.12),transparent 45%),radial-gradient(ellipse at 10% 90%,rgba(88,214,162,.08),transparent 40%)}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);background-size:64px 64px;opacity:.35;mask-image:linear-gradient(#000,transparent 85%);-webkit-mask-image:linear-gradient(#000,transparent 85%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.4vw,76px);line-height:1.04;letter-spacing:-.02em;margin:18px 0 8px}
+.role{color:var(--gold);font-size:clamp(16px,2vw,20px);letter-spacing:.04em;margin-bottom:22px}
+.brandline{display:flex;align-items:center;gap:14px;font-family:var(--serif);font-size:26px;letter-spacing:.2em;color:var(--cyan);margin-bottom:12px}
+.brandline:before{content:"";width:40px;height:1px;background:var(--gold)}
+.doms{color:var(--mu);font-size:14px;max-width:560px}
+.tag{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,26px);margin:26px 0 32px;color:var(--tx)}
+.acts{display:flex;gap:12px;flex-wrap:wrap}
+.panel{border:1px solid var(--ln);border-radius:14px;background:linear-gradient(150deg,var(--card),rgba(11,23,39,.9));padding:30px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.panel:before{content:"";position:absolute;left:30px;right:30px;top:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--cyan))}
+.panel .big{font-family:var(--serif);font-size:72px;line-height:1;color:var(--gold)}
+.panel .big small{font-size:34px;color:var(--cyan)}
+.panel p{color:var(--mu);font-size:14px;margin:6px 0 22px}
+.panel li{display:flex;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--ln);font-size:14px}
+.panel li:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--em);flex:none}
+/* grids */
+.grid{display:grid;gap:18px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:1fr 1fr}.g5{grid-template-columns:repeat(5,1fr)}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:28px;transition:.3s}
+.card:hover{border-color:rgba(216,184,120,.5);transform:translateY(-4px)}
+.card h3{font-family:var(--serif);font-weight:400;font-size:21px;margin:14px 0 12px}
+.ico{width:44px;height:44px;border-radius:10px;border:1px solid var(--ln);display:grid;place-items:center;color:var(--cyan);font-size:18px;background:rgba(81,215,232,.06)}
+.card li{color:var(--mu);font-size:14px;padding:5px 0 5px 18px;position:relative}
+.card li:before{content:"";position:absolute;left:0;top:14px;width:8px;height:1px;background:var(--gold)}
+.card p{color:var(--mu);font-size:14px}
+/* founder / about */
+.two{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.id{padding:32px;border:1px solid var(--ln);border-radius:14px;background:var(--card);text-align:center}
+.avatar{width:120px;height:120px;margin:0 auto 20px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:42px;color:var(--cyan);background:radial-gradient(circle,rgba(81,215,232,.12),transparent 70%)}
+.id h3{font-family:var(--serif);font-weight:400;font-size:26px;letter-spacing:.06em}
+.id .r{color:var(--gold);font-size:14px;margin:4px 0 16px}.id .x{display:inline-block;padding:6px 14px;border:1px solid var(--ln);border-radius:30px;color:var(--mu);font-size:13px}
+.quote p{color:var(--mu);margin-bottom:18px;font-size:16px}
+/* projects */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.f{background:none;border:1px solid var(--ln);color:var(--mu);padding:8px 16px;border-radius:30px;font-size:13px;cursor:pointer;transition:.2s}
+.f:hover{border-color:var(--gold);color:var(--gold)}.f.on{background:var(--gold);border-color:var(--gold);color:#07111F;font-weight:600}
+.pj{padding:0;overflow:hidden;display:flex;flex-direction:column}.pj[hidden]{display:none}
+.art{height:150px;position:relative;display:grid;place-items:center;background:linear-gradient(135deg,#0F2740,#0A1626);border-bottom:1px solid var(--ln);overflow:hidden}
+.art:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(81,215,232,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(81,215,232,.1) 1px,transparent 1px);background-size:24px 24px}
+.art span{position:relative;font-family:var(--serif);font-size:30px;color:var(--gold);border:1px solid var(--gold);border-radius:14px;padding:12px 20px;background:rgba(7,17,31,.85);letter-spacing:.08em}
+.pb{padding:24px;flex:1}.pb h3{margin:0 0 12px;font-size:19px}
+.ind{padding:24px 20px;text-align:center}.ind .ico{margin:0 auto 14px}.ind h3{font-size:16px;margin:0}
+/* tech */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{padding:10px 18px;border:1px solid var(--ln);border-radius:6px;background:var(--card);font-size:14px;color:var(--tx);transition:.2s}
+.chips span:hover{border-color:var(--cyan);color:var(--cyan)}
+.tg{margin-bottom:28px}.tg h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:600}
+/* multi-brand */
+.g4{grid-template-columns:repeat(4,1fr)}
+.bc{padding:26px 22px}.bc .cat{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-top:14px}
+.bc h3{margin:6px 0 16px;font-size:20px}
+.bl li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;margin-bottom:8px;border:1px solid var(--ln);border-radius:8px;background:rgba(7,17,31,.55);font-size:13px;color:var(--mu);transition:.2s}
+.bl li:before{display:none}.bl li:hover{border-color:var(--cyan)}
+.bl b{font-family:var(--serif);font-weight:400;font-size:18px;color:var(--tx);letter-spacing:.02em}
+.sw{margin-top:18px;padding:28px}.sw h3{margin:0 0 6px}
+.note{margin-top:22px;color:var(--mu);font-size:13px;border-left:2px solid var(--gold);padding-left:14px;max-width:760px}
+@media(max-width:1100px){.links{gap:16px;font-size:12px}}
+/* steps */
+.step{border-top:2px solid var(--gold);background:var(--card);padding:26px 22px;border-radius:0 0 10px 10px}
+.step b{font-family:var(--serif);font-size:32px;color:var(--cyan);font-weight:400}.step h3{font-family:var(--serif);font-weight:400;font-size:20px;margin:8px 0}.step p{color:var(--mu);font-size:14px}
+/* contact */
+.contact{padding:52px;border:1px solid rgba(216,184,120,.35);border-radius:16px;background:radial-gradient(ellipse at 90% 0,rgba(81,215,232,.1),transparent 45%),linear-gradient(135deg,#102337,#0A1626);display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.cl{padding:16px 18px;border:1px solid var(--ln);border-radius:8px;margin-bottom:12px;font-size:14px;display:flex;gap:14px;align-items:center}
+.cl i{font-style:normal;color:var(--gold);font-size:18px;width:22px;text-align:center}.cl small{display:block;color:var(--mu);font-size:12px}
+.soon{color:var(--gold)}
+footer{border-top:1px solid var(--ln);padding:44px 0 30px;background:#050D18}
+.fg{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.fg p{color:var(--mu);font-size:13px;max-width:380px;margin-top:10px}
+.fl{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mu)}.fl a:hover{color:var(--gold)}
+.copy{margin-top:30px;padding-top:20px;border-top:1px solid var(--ln);color:var(--mu);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+/* reveal: one subtle fade */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.rv.in{opacity:1;transform:none}
+@media(max-width:980px){.g3{grid-template-columns:repeat(2,1fr)}.g5{grid-template-columns:repeat(3,1fr)}.hero .wrap,.two,.contact{grid-template-columns:1fr;gap:34px}.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.sec{padding:74px 0}.burger{display:block}
+.links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#0A1626;border-bottom:1px solid var(--ln);padding:10px 20px 20px}
+.links.open{display:flex}.links a{padding:13px 0;border-bottom:1px solid var(--ln)}.links .cta{margin-top:14px;text-align:center}
+.g3,.g2,.g4{grid-template-columns:1fr}.g5{grid-template-columns:repeat(2,1fr)}.contact{padding:30px 22px}.hero{padding-top:110px}.brandline{font-size:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-  <div class="topline" id="topline"></div>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#home" aria-label="RM Tech home">
-        <span class="brand-mark">RM</span><span>RM TECH<small>ENGINEERING · AUTOMATION · INNOVATION</small></span>
-      </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="navlinks" id="navlinks">
-        <a href="#about">ABOUT</a><a href="#expertise">EXPERTISE</a><a href="#projects">PROJECTS</a><a href="#approach">APPROACH</a><a class="nav-cta" href="#contact">LET'S CONNECT ↗</a>
-      </nav>
-    </div>
-  </header>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#home" aria-label="RMTECH home"><span class="mark">RM</span><b>RMTECH</b></a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links">☰</button>
+  <nav class="links" id="links" aria-label="Main navigation">
+   <a href="#founder">Founder</a><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#brands">Brands</a><a href="#industries">Industries</a><a href="#projects">Projects</a><a href="#technologies">Technologies</a><a href="#approach">Approach</a><a class="cta" href="#contact">Contact</a>
+  </nav>
+ </div>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="grid-bg"></div>
-      <div class="wrap hero-inner">
-        <div>
-          <div class="availability"><span class="dot"></span> PERSONAL ENGINEERING PORTFOLIO <span>·</span> INDIA</div>
-          <div class="eyebrow" style="margin-top:28px">ELECTRICAL ENGINEERING / INDUSTRIAL TECHNOLOGY</div>
-          <h1>Turning complex<br>systems into<br><span>smart solutions.</span></h1>
-          <p class="hero-copy">I'm <strong>Ronak Makwana</strong> — an electrical engineering and industrial automation professional focused on practical machine solutions, control systems, data visibility and connected manufacturing.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#projects">EXPLORE MY WORK <span>↗</span></a>
-            <a class="btn-outline" href="#about">MORE ABOUT ME <span>↓</span></a>
-          </div>
-          <div class="hero-meta">
-            <div><strong>PLC / HMI</strong>CONTROL SYSTEMS</div>
-            <div><strong>SCADA / IIoT</strong>CONNECTED DATA</div>
-            <div><strong>INDUSTRY</strong>ENGINEERING</div>
-          </div>
-        </div>
-        <div class="visual" aria-label="RM Tech engineering visual">
-          <div class="orbit"></div>
-          <div class="float-tag tag-a">01 / CONTROL LOGIC</div>
-          <div class="float-tag tag-b">02 / LIVE DATA</div>
-          <div class="float-tag tag-c">SYSTEMS · INTEGRATION</div>
-          <div class="core-card">
-            <div class="card-top"><span>RM / ENGINEERING PROFILE</span><span class="signal">● ONLINE</span></div>
-            <div class="chip">RM</div>
-            <h3>Engineering Intelligence</h3>
-            <p>DESIGN · AUTOMATE · OPTIMIZE</p>
-            <div class="metric-grid">
-              <div class="metric"><b>PLC</b><span>CONTROL</span></div>
-              <div class="metric"><b>HMI</b><span>INTERFACE</span></div>
-              <div class="metric"><b>IIoT</b><span>CONNECT</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<main>
+<section class="hero" id="home">
+ <div class="wrap">
+  <div>
+   <p class="kicker">Founder &amp; Technology Director</p>
+   <h1>RONAK MAKWANA</h1>
+   <p class="role">Founder &amp; Technology Director</p>
+   <div class="brandline">RMTECH</div>
+   <p class="doms">Industrial Automation • Electrical Engineering • SCADA • IoT • Smart Manufacturing</p>
+   <p class="tag">Engineering Innovation. Digital Transformation.</p>
+   <div class="acts"><a class="btn" href="#projects">View Projects</a><a class="btn ghost" href="#contact">Get in Touch</a></div>
+  </div>
+  <aside class="panel" aria-label="Experience summary">
+   <div class="big">8<small>+</small></div>
+   <p>Years of engineering experience</p>
+   <ul><li>PLC &amp; machine automation</li><li>Drives &amp; motion control</li><li>SCADA &amp; Industrial IoT</li><li>Smart manufacturing</li></ul>
+  </aside>
+ </div>
+</section>
 
-    <div class="trustbar"><div class="wrap trust-inner">
-      <span class="trust-label">AREAS OF FOCUS</span><span class="trust-item">INDUSTRIAL AUTOMATION</span><span class="trust-item">MACHINE CONTROL</span><span class="trust-item">ENERGY MONITORING</span><span class="trust-item">DATA & VISUALIZATION</span>
-    </div></div>
+<section class="sec" id="founder">
+ <div class="wrap two">
+  <div class="id rv">
+   <div class="avatar" aria-hidden="true">RM</div>
+   <h3>RONAK MAKWANA</h3>
+   <p class="r">Founder &amp; Technology Director</p>
+   <span class="x">8+ Years of Engineering Experience</span>
+  </div>
+  <div class="quote rv">
+   <p class="kicker">Founder</p>
+   <h2>Practical engineering, built to run reliably.</h2>
+   <p>An engineering professional with over 8 years of experience in industrial automation, electrical engineering, machine manufacturing, and industrial digital technologies.</p>
+   <p>Focused on developing practical, reliable, and efficient engineering solutions through PLC automation, machine control systems, servo drives, SCADA, Industrial IoT, and smart manufacturing technologies.</p>
+  </div>
+ </div>
+</section>
 
-    <section class="section" id="about">
-      <div class="wrap about-grid">
-        <div class="about-panel reveal">
-          <div class="eyebrow">01 / ABOUT</div>
-          <h3>Practical engineering.<br>Purposeful innovation.</h3>
-          <p>Focused on bridging electrical systems, machine automation and useful digital tools for modern manufacturing.</p>
-          <div class="about-points">
-            <div class="point"><span class="check">✓</span> Problem solving</div>
-            <div class="point"><span class="check">✓</span> System integration</div>
-            <div class="point"><span class="check">✓</span> Process improvement</div>
-            <div class="point"><span class="check">✓</span> Continuous learning</div>
-          </div>
-        </div>
-        <div class="about-text reveal delay-1">
-          <div class="eyebrow">A LITTLE ABOUT MY WORK</div>
-          <div class="section-head" style="margin:12px 0 18px"><h2>Where electrical engineering meets intelligent manufacturing.</h2></div>
-          <p>My work and learning interests sit at the intersection of electrical engineering, industrial automation and digital monitoring. I enjoy understanding how machines operate, improving control strategies and making important operating information easier to access.</p>
-          <p>From PLC and HMI concepts to SCADA dashboards, energy monitoring and industrial connectivity, I aim to build solutions that are reliable, understandable for operators and useful for decision-makers.</p>
-          <p>This portfolio is a selected overview of my technical interests and project work. Detailed project information can be added as each case study is approved for public sharing.</p>
-        </div>
-      </div>
-    </section>
+<section class="sec alt" id="about">
+ <div class="wrap two">
+  <div class="rv"><p class="kicker">About RMTECH</p><h2>A technology brand for industrial engineering.</h2></div>
+  <div class="quote rv">
+   <p>RMTECH is the engineering and technology brand of Ronak Makwana. It brings together electrical engineering, machine automation and industrial digital tools to help manufacturing equipment run more reliably and become easier to monitor.</p>
+   <p>The work spans control systems, drives and motion, SCADA dashboards and connected monitoring, with a focus on solutions that operators can understand and maintenance teams can support.</p>
+  </div>
+ </div>
+</section>
 
-    <section class="section services" id="expertise">
-      <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow">02 / EXPERTISE</div><h2>Technical capabilities</h2></div><p>A practical blend of electrical systems, automation technology and data-driven visibility for industrial environments.</p></div>
-        <div class="service-grid">
-          <article class="service reveal"><div class="service-icon">⌘</div><h3>PLC & Machine Automation</h3><p>Control logic concepts, machine sequencing, interlocks, process control and troubleshooting across industrial applications.</p></article>
-          <article class="service reveal delay-1"><div class="service-icon">▤</div><h3>HMI & Operator Experience</h3><p>Operator-friendly screens, machine status, alarms, setpoints and clear process information for day-to-day operation.</p></article>
-          <article class="service reveal delay-2"><div class="service-icon">◉</div><h3>SCADA & IIoT Monitoring</h3><p>Industrial data collection, MQTT connectivity, dashboards and remote visibility concepts for connected equipment.</p></article>
-          <article class="service reveal"><div class="service-icon">ϟ</div><h3>Drives & Motion Control</h3><p>VFDs, servo systems, speed references, motor control and motion-related integration and commissioning concepts.</p></article>
-          <article class="service reveal delay-1"><div class="service-icon">▥</div><h3>Energy Monitoring</h3><p>Electrical parameter monitoring, power and energy trends, reporting and visualization for better operational awareness.</p></article>
-          <article class="service reveal delay-2"><div class="service-icon">⚙</div><h3>Electrical Engineering</h3><p>Panel and machine electrical systems, component selection, documentation, safety-minded design and fault finding.</p></article>
-        </div>
-      </div>
-    </section>
+<section class="sec" id="expertise">
+ <div class="wrap">
+  <div class="head rv"><p class="kicker">Technical Expertise</p><h2>Core engineering capabilities</h2><p class="lead">Five connected disciplines covering the control, power, motion and data layers of modern industrial machines.</p></div>
+  <div class="grid g3">
+   <article class="card rv"><div class="ico">⌘</div><h3>Industrial Automation</h3><ul><li>Siemens &amp; Delta PLC</li><li>Siemens TIA Portal</li><li>PLC Programming and Troubleshooting</li><li>HMI Development and Configuration</li><li>Machine Control Logic</li></ul></article>
+   <article class="card rv"><div class="ico">⟳</div><h3>Drives &amp; Motion Control</h3><ul><li>ABB, Danfoss, Delta, Siemens &amp; INVT VFDs</li><li>Siemens, ABB, Panasonic &amp; Delta Servo Systems</li><li>Variable Frequency Drives</li><li>Encoder Systems</li><li>Motion Control Integration</li></ul></article>
+   <article class="card rv"><div class="ico">◉</div><h3>SCADA &amp; Industrial IoT</h3><ul><li>Grafana</li><li>Node-RED</li><li>InfluxDB</li><li>MQTT</li><li>Industrial Monitoring</li><li>Energy Monitoring</li></ul></article>
+   <article class="card rv"><div class="ico">ϟ</div><h3>Electrical Engineering</h3><ul><li>Electrical Panel Design</li><li>Electrical Control Systems</li><li>Industrial Wiring</li><li>Machine Electrical Integration</li></ul></article>
+   <article class="card rv"><div class="ico">▥</div><h3>Smart Manufacturing</h3><ul><li>Production Monitoring</li><li>Industrial Data Analytics</li><li>Machine Monitoring</li><li>Digital Transformation</li></ul></article>
+  </div>
+ </div>
+</section>
 
-    <section class="section" id="projects">
-      <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow">03 / SELECTED WORK</div><h2>Projects & explorations</h2></div><p>A growing collection of industrial technology work. Public case studies will include scope, architecture, implementation and outcomes where sharing is permitted.</p></div>
-        <div class="project-toolbar reveal" role="group" aria-label="Filter projects">
-          <button class="filter active" data-filter="all">ALL WORK</button><button class="filter" data-filter="automation">AUTOMATION</button><button class="filter" data-filter="monitoring">MONITORING</button><button class="filter" data-filter="digital">DIGITAL</button>
-        </div>
-        <div class="project-grid">
-          <article class="project reveal" data-category="monitoring"><div class="project-art"><div class="art-symbol">MFM</div></div><div class="project-body"><div class="project-type">MONITORING / ENERGY</div><h3>Electrical Energy Dashboard</h3><p>Concept for centralized electrical parameter visibility, live readings, energy trends and operational reporting.</p><div class="tags"><span>MODBUS / RS485</span><span>MQTT</span><span>GRAFANA</span></div></div></article>
-          <article class="project reveal delay-1" data-category="automation"><div class="project-art"><div class="art-symbol">PLC</div></div><div class="project-body"><div class="project-type">AUTOMATION / CONTROL</div><h3>Machine Control Systems</h3><p>PLC and HMI control concepts for machine sequencing, operator interaction, process status and production support.</p><div class="tags"><span>SIEMENS</span><span>PLC</span><span>HMI</span></div></div></article>
-          <article class="project reveal delay-2" data-category="digital"><div class="project-art"><div class="art-symbol">IIoT</div></div><div class="project-body"><div class="project-type">DIGITAL / CONNECTIVITY</div><h3>Industrial Data Connectivity</h3><p>Exploration of machine-to-dashboard data flow using industrial communication, message brokers and time-series data.</p><div class="tags"><span>MQTT</span><span>NODE-RED</span><span>INFLUXDB</span></div></div></article>
-          <article class="project reveal" data-category="automation"><div class="project-art"><div class="art-symbol">DRV</div></div><div class="project-body"><div class="project-type">AUTOMATION / MOTION</div><h3>Drive & Motion Integration</h3><p>Drive configuration and control integration concepts for speed control, machine synchronization and reliable operation.</p><div class="tags"><span>VFD</span><span>SERVO</span><span>MODBUS</span></div></div></article>
-          <article class="project reveal delay-1" data-category="monitoring"><div class="project-art"><div class="art-symbol">DATA</div></div><div class="project-body"><div class="project-type">MONITORING / ANALYTICS</div><h3>Production Visibility</h3><p>Dashboard concepts that bring machine conditions and production information into a clear operator and management view.</p><div class="tags"><span>SCADA</span><span>VISUALIZATION</span><span>REPORTING</span></div></div></article>
-          <article class="project reveal delay-2" data-category="digital"><div class="project-art"><div class="art-symbol">WEB</div></div><div class="project-body"><div class="project-type">DIGITAL / PORTFOLIO</div><h3>RM Tech Digital Portfolio</h3><p>A personal technology platform to present engineering interests, selected projects and future technical explorations.</p><div class="tags"><span>WEB</span><span>DESIGN</span><span>BRANDING</span></div></div></article>
-        </div>
-      </div>
-    </section>
+<section class="sec alt" id="brands">
+ <div class="wrap">
+  <div class="head rv"><p class="kicker">Hands-On Experience</p><h2>Multi-Brand Automation Expertise</h2><p class="lead">Professional working experience across multiple industrial automation, PLC, HMI, servo and VFD brands, not limited to a single platform.</p></div>
+  <div class="grid g4">
+   <article class="card bc rv"><div class="ico">⌘</div><p class="cat">PLC</p><h3>PLC &amp; Automation Systems</h3><ul class="bl"><li><b>Siemens</b> PLC</li><li><b>Delta</b> PLC</li></ul></article>
+   <article class="card bc rv"><div class="ico">▤</div><p class="cat">HMI</p><h3>HMI &amp; Operator Interface</h3><ul class="bl"><li><b>Siemens</b> HMI</li><li><b>Delta</b> HMI</li><li><b>Weintek</b> HMI</li><li><b>HNC</b> HMI</li><li><b>Kinco</b> HMI</li></ul></article>
+   <article class="card bc rv"><div class="ico">⟳</div><p class="cat">Servo &amp; Motion Control</p><h3>Servo &amp; Motion Systems</h3><ul class="bl"><li><b>Siemens</b> Servo Systems</li><li><b>ABB</b> Servo Systems</li><li><b>Panasonic</b> Servo Systems</li><li><b>Delta</b> Servo Systems</li></ul></article>
+   <article class="card bc rv"><div class="ico">ϟ</div><p class="cat">VFD</p><h3>Industrial VFD &amp; Drives</h3><ul class="bl"><li><b>ABB</b> VFD</li><li><b>Danfoss</b> VFD</li><li><b>Delta</b> VFD</li><li><b>Siemens</b> VFD</li><li><b>INVT</b> VFD</li></ul></article>
+  </div>
+  <div class="card sw rv">
+   <p class="cat" style="color:var(--gold);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600">Software, Programming &amp; Integration</p>
+   <h3>Engineering skills across every platform</h3>
+   <div class="chips" style="margin-top:14px"><span>Siemens TIA Portal</span><span>PLC Programming and Troubleshooting</span><span>HMI Development and Configuration</span><span>Servo Parameterization and Commissioning</span><span>VFD Configuration and Commissioning</span><span>Encoder Feedback and Motion Control</span><span>Industrial Communication and System Integration</span></div>
+  </div>
+  <p class="note rv">Brand names are used only to describe the equipment and technologies Ronak Makwana has professional working experience with. RMTECH is not certified by, authorised by, or a partner or dealer of any of these brands.</p>
+ </div>
+</section>
 
-    <section class="section process" id="approach">
-      <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow">04 / APPROACH</div><h2>From problem to practical solution.</h2></div><p>A structured approach helps keep engineering solutions understandable, maintainable and aligned with real operating needs.</p></div>
-        <div class="steps">
-          <div class="step reveal"><div class="step-no">STEP / 01</div><h3>Understand</h3><p>Study the process, requirements, constraints and the real problem to be solved.</p></div>
-          <div class="step reveal delay-1"><div class="step-no">STEP / 02</div><h3>Design</h3><p>Plan the control approach, electrical interfaces, data flow and operator experience.</p></div>
-          <div class="step reveal delay-2"><div class="step-no">STEP / 03</div><h3>Implement</h3><p>Build, integrate, test and refine the solution with attention to safe operation.</p></div>
-          <div class="step reveal delay-3"><div class="step-no">STEP / 04</div><h3>Improve</h3><p>Review performance, document learnings and identify the next useful improvement.</p></div>
-        </div>
-      </div>
-    </section>
+<section class="sec" id="industries">
+ <div class="wrap">
+  <div class="head rv"><p class="kicker">Industries Served</p><h2>Experience across specialised equipment sectors</h2></div>
+  <div class="grid g5">
+   <div class="card ind rv"><div class="ico">⚙</div><h3>Industrial Extrusion Machinery</h3></div>
+   <div class="card ind rv"><div class="ico">✚</div><h3>Pharmaceutical Manufacturing Equipment</h3></div>
+   <div class="card ind rv"><div class="ico">◆</div><h3>CVD Lab-Grown Diamond Equipment</h3></div>
+   <div class="card ind rv"><div class="ico">⌘</div><h3>Industrial Automation</h3></div>
+   <div class="card ind rv"><div class="ico">▥</div><h3>Smart Manufacturing</h3></div>
+  </div>
+ </div>
+</section>
 
-    <section class="section" id="contact">
-      <div class="wrap">
-        <div class="contact-box reveal">
-          <div><div class="eyebrow">05 / CONTACT</div><h2>Have a project<br>or an idea in mind?</h2><p>I'm always interested in meaningful conversations around industrial automation, electrical engineering and technology. Reach out to connect or discuss a collaboration.</p><a class="btn" href="mailto:YOUR_EMAIL@example.com?subject=Hello%20Ronak%20-%20RM%20Tech">SEND AN EMAIL ↗</a><p style="font-size:10px;margin-top:13px;color:#8297aa">Before publishing, replace the sample email address in this page with your real professional email.</p></div>
-          <div class="contact-details">
-            <div class="contact-line"><span>✉</span><span>YOUR_EMAIL@example.com <small style="display:block;color:#8297aa">Replace with your email address</small></span></div>
-            <div class="contact-line"><span>⌖</span><span>Gujarat, India</span></div>
-            <div class="contact-line"><span>↗</span><span>Professional portfolio · RM Tech</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<section class="sec" id="projects">
+ <div class="wrap">
+  <div class="head rv"><p class="kicker">Projects Portfolio</p><h2>Selected engineering work</h2><p class="lead">Project categories shown in general terms. Customer names and confidential details are not published.</p></div>
+  <div class="filters" role="group" aria-label="Filter projects">
+   <button class="f on" data-f="all">All</button><button class="f" data-f="machine">Machine Automation</button><button class="f" data-f="special">Specialised Equipment</button><button class="f" data-f="digital">SCADA &amp; IoT</button><button class="f" data-f="motion">Motion Control</button>
+  </div>
+  <div class="grid g3" id="pg">
+   <article class="card pj" data-c="machine"><div class="art"><span>EXT</span></div><div class="pb"><h3>Extrusion Machine Automation</h3><ul><li>Industrial Extrusion Machinery</li><li>PLC-Based Automation</li><li>HMI Systems</li><li>Servo &amp; VFD Integration</li><li>Machine Control Systems</li><li>Production Monitoring</li></ul></div></article>
+   <article class="card pj" data-c="machine"><div class="art"><span>PHA</span></div><div class="pb"><h3>Pharmaceutical Machine Automation</h3><ul><li>Pharmaceutical Filling Machines</li><li>Bottle Capping Machines</li><li>Labeling Machines</li><li>Industrial Control Systems</li><li>Machine Automation</li></ul></div></article>
+   <article class="card pj" data-c="special"><div class="art"><span>CVD</span></div><div class="pb"><h3>CVD Lab-Grown Diamond Equipment</h3><ul><li>CVD (Chemical Vapor Deposition) Lab-Grown Diamond Machines</li><li>Electrical Systems</li><li>Machine Control</li><li>Automation Applications</li></ul></div></article>
+   <article class="card pj" data-c="digital"><div class="art"><span>IoT</span></div><div class="pb"><h3>Industrial SCADA &amp; IoT Solutions</h3><ul><li>Grafana Dashboards</li><li>Node-RED</li><li>InfluxDB</li><li>MQTT Communication</li><li>Industrial Data Monitoring</li><li>Energy Monitoring Systems</li></ul></div></article>
+   <article class="card pj" data-c="motion"><div class="art"><span>MOT</span></div><div class="pb"><h3>Advanced Motion Control Systems</h3><ul><li>Siemens PLC</li><li>ABB Drives</li><li>Panasonic Servo Systems</li><li>Encoder Feedback</li><li>Machine Motion Control</li></ul></div></article>
+  </div>
+ </div>
+</section>
 
-  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> RONAK MAKWANA · RM TECH. ALL RIGHTS RESERVED.</span><span>BUILT WITH PURPOSE. ENGINEERED FOR WHAT'S NEXT.</span><div class="footer-links"><a href="#home">BACK TO TOP ↑</a></div></div></footer>
+<section class="sec alt" id="technologies">
+ <div class="wrap">
+  <div class="head rv"><p class="kicker">Technologies &amp; Platforms</p><h2>Tools and platforms used</h2></div>
+  <div class="rv">
+   <div class="tg"><h3>PLC &amp; Automation</h3><div class="chips"><span>Siemens PLC</span><span>Delta PLC</span><span>Siemens TIA Portal</span></div></div>
+   <div class="tg"><h3>HMI &amp; Operator Interface</h3><div class="chips"><span>Siemens HMI</span><span>Delta HMI</span><span>Weintek HMI</span><span>HNC HMI</span><span>Kinco HMI</span></div></div>
+   <div class="tg"><h3>Servo &amp; Motion Control</h3><div class="chips"><span>Siemens Servo Systems</span><span>ABB Servo Systems</span><span>Panasonic Servo Systems</span><span>Delta Servo Systems</span><span>Encoder Feedback</span></div></div>
+   <div class="tg"><h3>VFD &amp; Drive Systems</h3><div class="chips"><span>ABB VFD</span><span>Danfoss VFD</span><span>Delta VFD</span><span>Siemens VFD</span><span>INVT VFD</span></div></div>
+   <div class="tg"><h3>SCADA &amp; Data</h3><div class="chips"><span>Grafana</span><span>Node-RED</span><span>InfluxDB</span><span>MQTT</span></div></div>
+  </div>
+ </div>
+</section>
 
-  <script>
-    const menuBtn=document.getElementById('menuBtn');
-    const navlinks=document.getElementById('navlinks');
-    menuBtn.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰';});
-    navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
-    document.getElementById('year').textContent=new Date().getFullYear();
-    const topLine=document.getElementById('topline');
-    window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-window.innerHeight;topLine.style.width=(max>0?window.scrollY/max*100:0)+'%';},{passive:true});
-    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-    document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const filter=btn.dataset.filter;document.querySelectorAll('.project').forEach(card=>{card.hidden=filter!=='all'&&card.dataset.category!==filter;});}));
-  </script>
+<section class="sec" id="approach">
+ <div class="wrap">
+  <div class="head rv"><p class="kicker">Engineering Approach</p><h2>From requirement to reliable operation</h2></div>
+  <div class="grid g4">
+   <div class="step rv"><b>1</b><h3>Understand</h3><p>Study the machine, process and operating requirements.</p></div>
+   <div class="step rv"><b>2</b><h3>Design</h3><p>Plan electrical, control and data architecture.</p></div>
+   <div class="step rv"><b>3</b><h3>Implement</h3><p>Build, integrate and test with safe operation in mind.</p></div>
+   <div class="step rv"><b>4</b><h3>Improve</h3><p>Review performance and refine for reliability.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec alt" id="why">
+ <div class="wrap">
+  <div class="head rv"><p class="kicker">Why Choose RMTECH</p><h2>Engineering built on practical experience</h2></div>
+  <div class="grid g3">
+   <div class="card rv"><div class="ico">8+</div><h3>8+ Years of Experience</h3><p>Hands-on engineering across industrial machinery and automation.</p></div>
+   <div class="card rv"><div class="ico">⚙</div><h3>Practical Industrial Knowledge</h3><p>Solutions shaped by real machine and factory conditions.</p></div>
+   <div class="card rv"><div class="ico">⌘</div><h3>Automation &amp; Control Expertise</h3><p>PLC, HMI, drives and motion control integration.</p></div>
+   <div class="card rv"><div class="ico">◈</div><h3>Multi-Industry Exposure</h3><p>Extrusion, pharmaceutical and CVD diamond equipment projects.</p></div>
+   <div class="card rv"><div class="ico">◉</div><h3>Industrial Digitalisation</h3><p>SCADA, IoT and monitoring that make data visible.</p></div>
+   <div class="card rv"><div class="ico">✓</div><h3>Reliable Engineering Solutions</h3><p>A focus on dependable, maintainable results.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="contact">
+ <div class="wrap">
+  <div class="contact rv">
+   <div>
+    <p class="kicker">Contact</p>
+    <h2>Let's discuss your engineering requirement.</h2>
+    <p class="lead">For automation, electrical engineering, SCADA or smart manufacturing enquiries, RMTECH's professional contact details will be published here.</p>
+   </div>
+   <div>
+    <!-- TO ADD YOUR EMAIL LATER: replace the <div class="cl">...</div> block below with:
+    <a class="cl" href="mailto:your-real-email@yourdomain.com"><i>✉</i><span>your-real-email@yourdomain.com<small>Email</small></span></a> -->
+    <div class="cl"><i>✉</i><span class="soon">Professional Email Coming Soon<small>Email</small></span></div>
+    <div class="cl"><i>⌖</i><span>Gujarat, India<small>Location</small></span></div>
+    <div class="cl"><i>◆</i><span>RMTECH · Ronak Makwana<small>Founder &amp; Technology Director</small></span></div>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fg">
+   <div><a class="brand" href="#home"><span class="mark">RM</span><b>RMTECH</b></a><p>Engineering Innovation. Digital Transformation.</p></div>
+   <nav class="fl" aria-label="Footer navigation"><a href="#founder">Founder</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#technologies">Technologies</a><a href="#contact">Contact</a><a href="#home">Back to top ↑</a></nav>
+  </div>
+  <div class="copy"><span>© <span id="yr"></span> RMTECH · Ronak Makwana. All rights reserved.</span><span>Industrial Automation • Electrical Engineering • SCADA • IoT • Smart Manufacturing</span></div>
+ </div>
+</footer>
+
+<script>
+(function(){
+ var b=document.getElementById('burger'),l=document.getElementById('links');
+ function close(){l.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰';}
+ b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',String(o));b.textContent=o?'✕':'☰';});
+ l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+ document.getElementById('yr').textContent=new Date().getFullYear();
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+  els.forEach(function(e){io.observe(e);});
+ }else{els.forEach(function(e){e.classList.add('in');});}
+ var fs=document.querySelectorAll('.f'),ps=document.querySelectorAll('.pj');
+ fs.forEach(function(f){f.addEventListener('click',function(){
+  fs.forEach(function(x){x.classList.remove('on');});f.classList.add('on');
+  var v=f.getAttribute('data-f');
+  ps.forEach(function(p){p.hidden=(v!=='all'&&p.getAttribute('data-c')!==v);});
+ });});
+})();
+</script>
 </body>
 </html>
