@@ -12,8 +12,17 @@
 <meta property="og:title" content="RMTECH | Industrial Automation &amp; Engineering Technology">
 <meta property="og:description" content="Engineering Innovation. Digital Transformation. Industrial Automation, Electrical Engineering, SCADA, IoT and Smart Manufacturing.">
 <meta property="og:url" content="https://rmtech.in">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307111F'/%3E%3Crect x='3' y='3' width='58' height='58' rx='12' fill='none' stroke='%23D8B878' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' font-weight='700' text-anchor='middle' fill='%2351D7E8'%3ERM%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="https://rmtech.in/assets/rmtech-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="og:image:alt" content="RMTECH logo — Innovate, Engineer, Transform">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RMTECH | Industrial Automation &amp; Engineering Technology">
+<meta name="twitter:description" content="Engineering Innovation. Digital Transformation. Industrial Automation, Electrical Engineering, SCADA, IoT and Smart Manufacturing.">
+<meta name="twitter:image" content="https://rmtech.in/assets/rmtech-og.jpg">
+<link rel="icon" type="image/png" href="assets/rmtech-favicon.png">
+<link rel="apple-touch-icon" href="assets/rmtech-favicon.png">
 <style>
 :root{--bg:#07111F;--bg2:#0B1727;--card:#101F32;--cyan:#51D7E8;--em:#58D6A2;--gold:#D8B878;--tx:#EDF4FB;--mu:#A6B6C8;--ln:rgba(166,182,200,.16);--max:1160px;--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
@@ -33,10 +42,14 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(7,17,31,.85);b
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:12px}
 .mark{width:38px;height:38px;border:1px solid var(--gold);border-radius:9px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:var(--cyan);font-size:15px}
-.brand b{font-family:var(--serif);letter-spacing:.14em;font-size:18px}
+
 .links{display:flex;align-items:center;gap:26px;font-size:13px;color:var(--mu)}
 .links a:hover{color:var(--gold)}.links .cta{color:var(--gold);border:1px solid var(--gold);padding:8px 16px;border-radius:4px}.links .cta:hover{background:var(--gold);color:#07111F}
 .burger{display:none;background:none;border:1px solid var(--ln);color:var(--tx);border-radius:6px;padding:7px 11px;font-size:18px;cursor:pointer}
+.logo{display:block;height:auto;object-fit:contain}
+.brand .logo{height:56px;width:auto;max-width:200px}
+.wa-h{display:inline-flex;align-items:center;gap:7px;color:var(--em)!important;border:1px solid rgba(88,214,162,.45);padding:8px 14px;border-radius:4px}
+.wa-h:hover{background:rgba(88,214,162,.12)}
 /* hero */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;overflow:hidden;background:radial-gradient(ellipse at 80% 30%,rgba(81,215,232,.12),transparent 45%),radial-gradient(ellipse at 10% 90%,rgba(88,214,162,.08),transparent 40%)}
 .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);background-size:64px 64px;opacity:.35;mask-image:linear-gradient(#000,transparent 85%);-webkit-mask-image:linear-gradient(#000,transparent 85%)}
@@ -50,6 +63,7 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(7,17,31,.85);b
 .acts{display:flex;gap:12px;flex-wrap:wrap}
 .panel{border:1px solid var(--ln);border-radius:14px;background:linear-gradient(150deg,var(--card),rgba(11,23,39,.9));padding:30px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35)}
 .panel:before{content:"";position:absolute;left:30px;right:30px;top:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--cyan))}
+.panel .logo{width:100%;max-width:340px;margin:0 auto 22px;filter:drop-shadow(0 0 22px rgba(60,140,255,.28))}
 .panel .big{font-family:var(--serif);font-size:72px;line-height:1;color:var(--gold)}
 .panel .big small{font-size:34px;color:var(--cyan)}
 .panel p{color:var(--mu);font-size:14px;margin:6px 0 22px}
@@ -95,7 +109,6 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(7,17,31,.85);b
 .bl b{font-family:var(--serif);font-weight:400;font-size:18px;color:var(--tx);letter-spacing:.02em}
 .sw{margin-top:18px;padding:28px}.sw h3{margin:0 0 6px}
 .note{margin-top:22px;color:var(--mu);font-size:13px;border-left:2px solid var(--gold);padding-left:14px;max-width:760px}
-@media(max-width:1100px){.links{gap:16px;font-size:12px}}
 /* steps */
 .step{border-top:2px solid var(--gold);background:var(--card);padding:26px 22px;border-radius:0 0 10px 10px}
 .step b{font-family:var(--serif);font-size:32px;color:var(--cyan);font-weight:400}.step h3{font-family:var(--serif);font-weight:400;font-size:20px;margin:8px 0}.step p{color:var(--mu);font-size:14px}
@@ -104,6 +117,12 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(7,17,31,.85);b
 .cl{padding:16px 18px;border:1px solid var(--ln);border-radius:8px;margin-bottom:12px;font-size:14px;display:flex;gap:14px;align-items:center}
 .cl i{font-style:normal;color:var(--gold);font-size:18px;width:22px;text-align:center}.cl small{display:block;color:var(--mu);font-size:12px}
 .soon{color:var(--gold)}
+.cl a{color:var(--tx)}.cl a:hover{color:var(--gold)}
+.ph{font-family:var(--serif);font-size:clamp(24px,3vw,32px);letter-spacing:.03em;margin:22px 0 4px;display:block}
+.ph:hover{color:var(--gold)}
+.btn.wa{background:var(--em);border-color:var(--em)}.btn.wa:hover{background:transparent;color:var(--em)}
+.fb .logo{height:60px;width:auto;max-width:220px}
+.fc{margin-top:12px;font-size:13px;color:var(--mu)}.fc a{color:var(--tx)}.fc a:hover{color:var(--gold)}
 footer{border-top:1px solid var(--ln);padding:44px 0 30px;background:#050D18}
 .fg{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
 .fg p{color:var(--mu);font-size:13px;max-width:380px;margin-top:10px}
@@ -112,9 +131,10 @@ footer{border-top:1px solid var(--ln);padding:44px 0 30px;background:#050D18}
 /* reveal: one subtle fade */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.rv.in{opacity:1;transform:none}
 @media(max-width:980px){.g3{grid-template-columns:repeat(2,1fr)}.g5{grid-template-columns:repeat(3,1fr)}.hero .wrap,.two,.contact{grid-template-columns:1fr;gap:34px}.g4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:720px){.sec{padding:74px 0}.burger{display:block}
-.links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#0A1626;border-bottom:1px solid var(--ln);padding:10px 20px 20px}
-.links.open{display:flex}.links a{padding:13px 0;border-bottom:1px solid var(--ln)}.links .cta{margin-top:14px;text-align:center}
+@media(max-width:1180px){.burger{display:block}
+.links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#0A1626;border-bottom:1px solid var(--ln);padding:10px 20px 20px;font-size:14px}
+.links.open{display:flex}.links a{padding:13px 0;border-bottom:1px solid var(--ln)}.links .cta,.links .wa-h{margin-top:12px;text-align:center;justify-content:center;padding:12px}}
+@media(max-width:720px){.brand .logo{height:38px}.fb .logo{height:52px}.sec{padding:74px 0}
 .g3,.g2,.g4{grid-template-columns:1fr}.g5{grid-template-columns:repeat(2,1fr)}.contact{padding:30px 22px}.hero{padding-top:110px}.brandline{font-size:22px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
 </style>
@@ -122,10 +142,10 @@ footer{border-top:1px solid var(--ln);padding:44px 0 30px;background:#050D18}
 <body>
 <header>
  <div class="wrap nav">
-  <a class="brand" href="#home" aria-label="RMTECH home"><span class="mark">RM</span><b>RMTECH</b></a>
+  <a class="brand" href="#home" aria-label="RMTECH home"><img class="logo" src="assets/rmtech-logo.png" width="1200" height="429" alt="RMTECH logo — Innovate, Engineer, Transform"></a>
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links">☰</button>
   <nav class="links" id="links" aria-label="Main navigation">
-   <a href="#founder">Founder</a><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#brands">Brands</a><a href="#industries">Industries</a><a href="#projects">Projects</a><a href="#technologies">Technologies</a><a href="#approach">Approach</a><a class="cta" href="#contact">Contact</a>
+   <a href="#founder">Founder</a><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#brands">Brands</a><a href="#industries">Industries</a><a href="#projects">Projects</a><a href="#technologies">Technologies</a><a href="#approach">Approach</a><a href="#why">Why RMTECH</a><a class="wa-h" href="https://wa.me/918238247266?text=Hello%20RMTECH%2C%20I%20would%20like%20to%20discuss%20an%20industrial%20automation%20or%20engineering%20requirement." target="_blank" rel="noopener" aria-label="Chat with RMTECH on WhatsApp">WhatsApp</a><a class="cta" href="#contact">Contact</a>
   </nav>
  </div>
 </header>
@@ -140,9 +160,10 @@ footer{border-top:1px solid var(--ln);padding:44px 0 30px;background:#050D18}
    <div class="brandline">RMTECH</div>
    <p class="doms">Industrial Automation • Electrical Engineering • SCADA • IoT • Smart Manufacturing</p>
    <p class="tag">Engineering Innovation. Digital Transformation.</p>
-   <div class="acts"><a class="btn" href="#projects">View Projects</a><a class="btn ghost" href="#contact">Get in Touch</a></div>
+   <div class="acts"><a class="btn" href="#projects">View Projects</a><a class="btn ghost" href="#contact">Get in Touch</a><a class="btn wa" href="https://wa.me/918238247266?text=Hello%20RMTECH%2C%20I%20would%20like%20to%20discuss%20an%20industrial%20automation%20or%20engineering%20requirement." target="_blank" rel="noopener">WhatsApp Us</a></div>
   </div>
-  <aside class="panel" aria-label="Experience summary">
+  <aside class="panel" aria-label="RMTECH logo and experience summary">
+   <img class="logo" src="assets/rmtech-logo.png" width="1200" height="429" alt="RMTECH logo with RM monogram and orbital swoosh">
    <div class="big">8<small>+</small></div>
    <p>Years of engineering experience</p>
    <ul><li>PLC &amp; machine automation</li><li>Drives &amp; motion control</li><li>SCADA &amp; Industrial IoT</li><li>Smart manufacturing</li></ul>
@@ -210,7 +231,7 @@ footer{border-top:1px solid var(--ln);padding:44px 0 30px;background:#050D18}
 
 <section class="sec" id="industries">
  <div class="wrap">
-  <div class="head rv"><p class="kicker">Industries Served</p><h2>Experience across specialised equipment sectors</h2></div>
+  <div class="head rv"><p class="kicker">Industries Served</p><h2>Engineering Experience Across Industries</h2></div>
   <div class="grid g5">
    <div class="card ind rv"><div class="ico">⚙</div><h3>Industrial Extrusion Machinery</h3></div>
    <div class="card ind rv"><div class="ico">✚</div><h3>Pharmaceutical Manufacturing Equipment</h3></div>
@@ -282,11 +303,15 @@ footer{border-top:1px solid var(--ln);padding:44px 0 30px;background:#050D18}
    <div>
     <p class="kicker">Contact</p>
     <h2>Let's discuss your engineering requirement.</h2>
-    <p class="lead">For automation, electrical engineering, SCADA or smart manufacturing enquiries, RMTECH's professional contact details will be published here.</p>
+    <p class="lead">For industrial automation, electrical engineering, SCADA or smart manufacturing requirements, call or message RMTECH directly.</p>
+    <a class="ph" href="tel:+918238247266">+91 8238247266</a>
+    <div class="acts" style="margin-top:18px"><a class="btn" href="tel:+918238247266">Call Now</a><a class="btn wa" href="https://wa.me/918238247266?text=Hello%20RMTECH%2C%20I%20would%20like%20to%20discuss%20an%20industrial%20automation%20or%20engineering%20requirement." target="_blank" rel="noopener">WhatsApp Us</a></div>
    </div>
    <div>
     <!-- TO ADD YOUR EMAIL LATER: replace the <div class="cl">...</div> block below with:
     <a class="cl" href="mailto:your-real-email@yourdomain.com"><i>✉</i><span>your-real-email@yourdomain.com<small>Email</small></span></a> -->
+    <a class="cl" href="tel:+918238247266"><i>✆</i><span>+91 8238247266<small>Mobile / Call</small></span></a>
+    <a class="cl" href="https://wa.me/918238247266?text=Hello%20RMTECH%2C%20I%20would%20like%20to%20discuss%20an%20industrial%20automation%20or%20engineering%20requirement." target="_blank" rel="noopener"><i>◎</i><span>WhatsApp<small>Message RMTECH</small></span></a>
     <div class="cl"><i>✉</i><span class="soon">Professional Email Coming Soon<small>Email</small></span></div>
     <div class="cl"><i>⌖</i><span>Gujarat, India<small>Location</small></span></div>
     <div class="cl"><i>◆</i><span>RMTECH · Ronak Makwana<small>Founder &amp; Technology Director</small></span></div>
@@ -299,8 +324,8 @@ footer{border-top:1px solid var(--ln);padding:44px 0 30px;background:#050D18}
 <footer>
  <div class="wrap">
   <div class="fg">
-   <div><a class="brand" href="#home"><span class="mark">RM</span><b>RMTECH</b></a><p>Engineering Innovation. Digital Transformation.</p></div>
-   <nav class="fl" aria-label="Footer navigation"><a href="#founder">Founder</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#technologies">Technologies</a><a href="#contact">Contact</a><a href="#home">Back to top ↑</a></nav>
+   <div><a class="brand fb" href="#home" aria-label="RMTECH home"><img class="logo" src="assets/rmtech-logo.png" width="1200" height="429" alt="RMTECH logo" loading="lazy"></a><p>Engineering Innovation. Digital Transformation.</p><p class="fc"><a href="tel:+918238247266">+91 8238247266</a> · <a href="https://wa.me/918238247266?text=Hello%20RMTECH%2C%20I%20would%20like%20to%20discuss%20an%20industrial%20automation%20or%20engineering%20requirement." target="_blank" rel="noopener">WhatsApp</a></p></div>
+   <nav class="fl" aria-label="Footer navigation"><a href="#founder">Founder</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#brands">Brands</a><a href="#technologies">Technologies</a><a href="#why">Why RMTECH</a><a href="#contact">Contact</a><a href="#home">Back to top ↑</a></nav>
   </div>
   <div class="copy"><span>© <span id="yr"></span> RMTECH · Ronak Makwana. All rights reserved.</span><span>Industrial Automation • Electrical Engineering • SCADA • IoT • Smart Manufacturing</span></div>
  </div>
